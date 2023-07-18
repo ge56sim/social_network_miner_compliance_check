@@ -1,0 +1,58 @@
+{
+    "graph_01": {
+        "nodes": [
+            {
+                "resource": "Pharmaceutical Company"
+            },
+            {
+                "resource": "Clinical Research Organization"
+            },
+            {
+                "resource": "Investigational Review Board"
+            },
+            {
+                "resource": "Ethics Committee"
+            },
+            {
+                "resource": "Pharmacies and Healthcare Providers"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Clinical Research Organization",
+                "activity": "Send Research Approaches and Results"
+            },
+            {
+                "resource_performer": "Clinical Research Organization",
+                "resource_consumer": "Pharmaceutical Company",
+                "activity": "Conduct Clinical Trial"
+            },
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Investigational Review Board",
+                "activity": "Forward Clinical Trial Protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Ethics Committee",
+                "activity": "Hand Over Protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Pharmaceutical Company",
+                "activity": "Review Protocols"
+            },
+            {
+                "resource_performer": "Ethics Committee",
+                "resource_consumer": "Pharmaceutical Company",
+                "activity": "Review Protocols"
+            },
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Pharmacies and Healthcare Providers",
+                "activity": "Receive Acceptance or Rejection"
+            }
+        ]
+    }
+}

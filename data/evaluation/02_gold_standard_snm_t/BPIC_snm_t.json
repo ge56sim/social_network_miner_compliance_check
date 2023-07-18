@@ -1,0 +1,142 @@
+{
+  "graph_01": {
+    "nodes": [
+      {
+        "resource": "Employee"
+      },
+      {
+        "resource": "Travel Administration"
+      },
+      {
+        "resource": "Budget Owner"
+      },
+      {
+        "resource": "Supervisor"
+      },
+      {
+        "resource": "Director"
+      }
+    ],
+    "edges": [
+      {
+        "resource_performer": "Employee",
+        "resource_consumer": "Travel Administration",
+        "activity": "send request"
+      },
+      {
+        "resource_performer": "Travel Administration",
+        "resource_consumer": "Budget Owner",
+        "activity": "forward request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Budget Owner",
+        "resource_consumer": "Supervisor",
+        "activity": "forward request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Supervisor",
+        "resource_consumer": "Director",
+        "activity": "forward request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Director",
+        "resource_consumer": "Supervisor",
+        "activity": "reject request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Supervisor",
+        "resource_consumer": "Budget Owner",
+        "activity": "reject request"
+      },
+      {
+        "resource_performer": "Budget Owner",
+        "resource_consumer": "Travel Administration",
+        "activity": "reject request"
+      },
+      {
+        "resource_performer": "Travel Administration",
+        "resource_consumer": "Employee",
+        "activity": "reject request"
+      }
+    ]
+  },
+    "graph_02": {
+    "nodes": [
+      {
+        "resource": "Employee"
+      },
+      {
+        "resource": "Travel Administration"
+      },
+      {
+        "resource": "Budget Owner"
+      },
+      {
+        "resource": "Supervisor"
+      },
+      {
+        "resource": "Director"
+      }
+    ],
+    "edges": [
+      {
+        "resource_performer": "Employee",
+        "resource_consumer": "Travel Administration",
+        "activity": "send request"
+      },
+      {
+        "resource_performer": "Travel Administration",
+        "resource_consumer": "Budget Owner",
+        "activity": "forward request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Budget Owner",
+        "resource_consumer": "Supervisor",
+        "activity": "forward request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Supervisor",
+        "resource_consumer": "Director",
+        "activity": "forward request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Director",
+        "resource_consumer": "Supervisor",
+        "activity": "accept request"
+      },
+      {
+        "optional": true,
+        "resource_performer": "Supervisor",
+        "resource_consumer": "Budget Owner",
+        "activity": "accept request"
+      },
+      {
+        "resource_performer": "Budget Owner",
+        "resource_consumer": "Travel Administration",
+        "activity": "accept request"
+      },
+      {
+        "resource_performer": "Travel Administration",
+        "resource_consumer": "Employee",
+        "activity": "accept request"
+      },
+      {
+        "resource_performer": "Employee",
+        "resource_consumer": "Travel Administration",
+        "activity": "request payment"
+      },
+      {
+        "resource_performer": "Travel Administration",
+        "resource_consumer": "Budget Owner",
+        "activity": "request payment"
+      }
+    ]
+  }
+}

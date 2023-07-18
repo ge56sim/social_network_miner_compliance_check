@@ -1,0 +1,47 @@
+{
+    "graph_01": {
+        "nodes": [
+            {
+                "resource": "Coordination Unit"
+            },
+            {
+                "resource": "Support Officer"
+            },
+            {
+                "resource": "Committee Members"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Coordination Unit",
+                "resource_consumer": "Support Officer",
+                "activity": "Draft Schedule"
+            },
+            {
+                "resource_performer": "Support Officer",
+                "resource_consumer": "Coordination Unit",
+                "activity": "Check Dates"
+            },
+            {
+                "resource_performer": "Coordination Unit",
+                "resource_consumer": "Coordination Unit",
+                "activity": "Suggest Modifications"
+            },
+            {
+                "resource_performer": "Coordination Unit",
+                "resource_consumer": "Committee Members",
+                "activity": "Recheck Dates"
+            },
+            {
+                "resource_performer": "Committee Members",
+                "resource_consumer": "Committee Members",
+                "activity": "Send Final Schedule"
+            },
+            {
+                "resource_performer": "Committee Members",
+                "resource_consumer": "Coordination Unit",
+                "activity": "Check Diaries"
+            }
+        ]
+    }
+}

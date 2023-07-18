@@ -1,0 +1,93 @@
+{
+    "graph_01": {
+
+    "nodes": [
+      {
+        "resource": "Coordination Unit"
+      },
+      {
+        "resource": "Support Officer"
+      },
+      {
+        "resource": "Committee Members"
+      }
+    ],
+
+    "edges": [
+      {
+            "resource_performer": 1,
+            "resource_consumer": 2,
+            "activity": ["draft schedule of meetings", "add dates to calendar"]
+      },
+      {
+            "resource_performer": 2,
+            "resource_consumer": 1,
+            "activity": "suggest modifications"
+      },
+      {
+            "resource_performer": 1,
+            "resource_consumer": 1,
+            "activity": ["recheck dates", "look for potential conflicts"]
+      },
+      {
+            "resource_performer": 1,
+            "resource_consumer": 3,
+            "activity": "send final schedule of meetings"
+      },
+      {
+            "resource_performer": 3,
+            "resource_receiver": 1,
+            "activity": "receive order"
+      }
+    ]
+  },
+
+    "graph_02": {
+
+    "nodes": [
+      {
+        "resource": "Coordination Unit"
+      },
+      {
+        "resource": "Support Officer"
+      },
+      {
+        "resource": "Committee Members"
+      }
+    ],
+
+    "edges": [
+      {
+            "resource_performer": "Coordination Unit",
+            "resource_consumer": "Support Officer",
+            "activity": ["draft schedule of meetings", "add dates to calendar"]
+      },
+      {
+            "resource_performer": "Support Officer",
+            "resource_consumer": "Coordination Unit",
+            "activity": "suggest modifications"
+      },
+      {
+            "resource_performer": "Coordination Unit",
+            "resource_consumer": "Coordination Unit",
+            "activity": ["recheck dates", "look for potential conflicts"]
+      },
+      {
+            "resource_performer": "Coordination Unit",
+            "resource_consumer": "Committee Members",
+            "activity": "send final schedule of meetings"
+      },
+      {
+            "optional": true,
+            "resource_performer": "Committee Members",
+            "resource_consumer": "Committee Members",
+            "activity": "check diaries"
+      },
+      {
+            "actor_performer": "Committee Members",
+            "actor_receiver": "Coordination Unit",
+            "activity": "advise for conflicts"
+      }
+    ]
+  }
+}

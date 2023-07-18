@@ -1,0 +1,161 @@
+{
+    "actors": [
+        {
+            "actor_id": 1,
+            "actor_name": "Employee"
+        },
+        {
+            "actor_id": 2,
+            "actor_name": "Travel Administration"
+        },
+        {
+            "actor_id": 3,
+            "actor_name": "Budget Owner"
+        },
+        {
+            "actor_id": 4,
+            "actor_name": "Supervisor",
+            "optional": true
+        },
+        {
+            "actor_id": 5,
+            "actor_name": "Director",
+            "optional": true
+        }
+    ],
+    "control_flow": [
+        {
+            "control_flow_id": 1,
+            "human_authors_activity_choice": "submission of travel",
+            "actor_performer": 1,
+            "actor_receiver": null,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 2,
+            "human_authors_activity_choice": "send request",
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 3,
+            "human_authors_activity_choice": "forward request",
+            "actor_performer": 2,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "optional": true,
+            "control_flow_id": 4,
+            "human_authors_activity_choice": "forward request",
+            "actor_performer": 3,
+            "actor_receiver": 4,
+            "terminating_activity": false
+
+        },
+        {
+            "optional": true,
+            "control_flow_id": 5,
+            "human_authors_activity_choice": "forward request",
+            "actor_performer": 4,
+            "actor_receiver": 5,
+            "terminating_activity": false
+        },
+        {
+            "optional": true,
+            "control_flow_id": 6,
+            "human_authors_activity_choice": "reject request",
+            "actor_performer": 5,
+            "actor_receiver": 4,
+            "terminating_activity": false
+        },
+        {
+            "optional": true,
+            "control_flow_id": 7,
+            "human_authors_activity_choice": "reject request",
+            "actor_performer": 4,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 8,
+            "human_authors_activity_choice": "reject request",
+            "actor_performer": 3,
+            "actor_receiver": 2,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 9,
+            "human_authors_activity_choice": "reject request",
+            "actor_performer": 2,
+            "actor_receiver": 1,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 10,
+            "human_authors_activity_choice": "resubmit",
+            "actor_performer": 1,
+            "actor_receiver": null,
+            "terminating_activity": true
+        },
+        {
+            "control_flow_id": 11,
+            "human_authors_activity_choice": "reject request",
+            "actor_performer": 1,
+            "actor_receiver": null,
+            "terminating_activity": true
+        },
+        {
+            "optional": true,
+            "control_flow_id": 12,
+            "human_authors_activity_choice": "accept request",
+            "actor_performer": 5,
+            "actor_receiver": 4,
+            "terminating_activity": false
+        },
+        {
+            "optional": true,
+            "control_flow_id": 13,
+            "human_authors_activity_choice": "accept request",
+            "actor_performer": 4,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 14,
+            "human_authors_activity_choice": "accept request",
+            "actor_performer": 3,
+            "actor_receiver": 2,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 15,
+            "human_authors_activity_choice": "accept request",
+            "actor_performer": 2,
+            "actor_receiver": 1,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 16,
+            "human_authors_activity_choice": "request payment",
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 17,
+            "human_authors_activity_choice": "request payment",
+            "actor_performer": 2,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 18,
+            "human_authors_activity_choice": "make payment",
+            "actor_performer": 3,
+            "actor_receiver": null,
+            "terminating_activity": true
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "actors": [
+        {
+            "actor_id": 1,
+            "actor_name": "Coordination Unit"
+        },
+        {
+            "actor_id": 2,
+            "actor_name": "Support Officer"
+        },
+        {
+            "actor_id": 3,
+            "actor_name": "Committee Members"
+        }
+    ],
+    "activities": [
+        {
+            "activity_id": 1,
+            "activity_name": "Draft Schedule"
+        },
+        {
+            "activity_id": 2,
+            "activity_name": "Check Dates"
+        },
+        {
+            "activity_id": 3,
+            "activity_name": "Suggest Modifications"
+        },
+        {
+            "activity_id": 4,
+            "activity_name": "Recheck Dates"
+        },
+        {
+            "activity_id": 5,
+            "activity_name": "Send Final Schedule"
+        },
+        {
+            "activity_id": 6,
+            "activity_name": "Check Diaries"
+        },
+        {
+            "activity_id": 7,
+            "activity_name": "Advise of Conflicts"
+        }
+    ],
+    "control_flow": [
+        {
+            "control_flow_id": 1,
+            "activity_from": 1,
+            "activity_to": 2,
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 2,
+            "activity_from": 2,
+            "activity_to": 3,
+            "actor_performer": 2,
+            "actor_receiver": 1,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 3,
+            "activity_from": 3,
+            "activity_to": 4,
+            "actor_performer": 1,
+            "actor_receiver": 1,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 4,
+            "activity_from": 4,
+            "activity_to": 5,
+            "actor_performer": 1,
+            "actor_receiver": 3,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 5,
+            "activity_from": 5,
+            "activity_to": 6,
+            "actor_performer": 3,
+            "actor_receiver": 3,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 6,
+            "activity_from": 6,
+            "activity_to": 7,
+            "actor_performer": 3,
+            "actor_receiver": 1,
+            "terminating_activity": true,
+            "flow_type": "sequential"
+        }
+    ]
+}

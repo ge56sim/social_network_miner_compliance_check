@@ -1,0 +1,92 @@
+{
+    "graph_01": {
+        "nodes": [
+            {
+                "resource": "Employee"
+            },
+            {
+                "resource": "Travel Administration"
+            },
+            {
+                "resource": "Budget Owner/Supervisor"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "Submit Request"
+            },
+            {
+                "resource_performer": "Travel Administration",
+                "resource_consumer": "Employee",
+                "activity": "Approve Request"
+            },
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "Reject Request"
+            },
+            {
+                "resource_performer": "Travel Administration",
+                "resource_consumer": "Budget Owner/Supervisor",
+                "activity": "Approve Request"
+            },
+            {
+                "resource_performer": "Budget Owner/Supervisor",
+                "resource_consumer": "Budget Owner/Supervisor",
+                "activity": "Request Payment"
+            }
+        ]
+    },
+    "graph_02": {
+        "nodes": [
+            {
+                "resource": "Employee"
+            },
+            {
+                "resource": "Travel Administration"
+            },
+            {
+                "resource": "Budget Owner/Supervisor"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "Submit Request"
+            },
+            {
+                "resource_performer": "Travel Administration",
+                "resource_consumer": "Employee",
+                "activity": "Approve Request"
+            },
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "Reject Request"
+            },
+            {
+                "resource_performer": "Travel Administration",
+                "resource_consumer": "Budget Owner/Supervisor",
+                "activity": "Approve Request"
+            },
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "File Travel Permit"
+            },
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "Submit Travel Declaration"
+            },
+            {
+                "resource_performer": "Employee",
+                "resource_consumer": "Travel Administration",
+                "activity": "Submit Reimbursement Request"
+            }
+        ]
+    }
+}

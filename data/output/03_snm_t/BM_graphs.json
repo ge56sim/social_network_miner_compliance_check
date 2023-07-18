@@ -1,0 +1,61 @@
+{
+    "graph_01": {
+        "nodes": [
+            {
+                "resource": "Sales Department"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Sales Department",
+                "resource_consumer": "Sales Department",
+                "activity": "Receive Order"
+            }
+        ]
+    },
+    "graph_02": {
+        "nodes": [
+            {
+                "resource": "Sales Department"
+            },
+            {
+                "resource": "Storehouse"
+            },
+            {
+                "resource": "Engineering Department"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Sales Department",
+                "resource_consumer": "Sales Department",
+                "activity": "Receive Order"
+            },
+            {
+                "resource_performer": "Sales Department",
+                "resource_consumer": "Storehouse",
+                "activity": "Accept Order"
+            },
+            {
+                "resource_performer": "Sales Department",
+                "resource_consumer": "Engineering Department",
+                "activity": "Accept Order"
+            },
+            {
+                "resource_performer": "Storehouse",
+                "resource_consumer": "Engineering Department",
+                "activity": "Process Part List"
+            },
+            {
+                "resource_performer": "Engineering Department",
+                "resource_consumer": "Engineering Department",
+                "activity": "Prepare for Assembly"
+            },
+            {
+                "resource_performer": "Engineering Department",
+                "resource_consumer": "Sales Department",
+                "activity": "Assemble Bicycle"
+            }
+        ]
+    }
+}

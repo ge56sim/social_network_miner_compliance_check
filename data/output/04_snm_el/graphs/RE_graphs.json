@@ -1,0 +1,120 @@
+{
+    "graph_01": {
+        "case_ids": [
+            "1",
+            "4"
+        ],
+        "nodes": [
+            {
+                "resource": "Pharmaceutical Company"
+            },
+            {
+                "resource": "Investigational Review Board"
+            },
+            {
+                "resource": "Ethics Committee"
+            },
+            {
+                "resource": "Pharmacies and Healthcare Providers"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Investigational Review Board",
+                "activity": "send protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Investigational Review Board",
+                "activity": "hand over protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Ethics Committee",
+                "activity": "review protocols"
+            },
+            {
+                "resource_performer": "Ethics Committee",
+                "resource_consumer": "Investigational Review Board",
+                "activity": "review protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Pharmacies and Healthcare Providers",
+                "activity": "receive acceptance"
+            }
+        ]
+    },
+    "graph_02": {
+        "case_ids": [
+            "2"
+        ],
+        "nodes": [
+            {
+                "resource": "Pharmaceutical Company"
+            },
+            {
+                "resource": "Ethics Committee"
+            },
+            {
+                "resource": "Investigational Review Board"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Ethics Committee",
+                "activity": "send protocols"
+            },
+            {
+                "resource_performer": "Ethics Committee",
+                "resource_consumer": "Investigational Review Board",
+                "activity": "review protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Ethics Committee",
+                "activity": "handover protocols"
+            },
+            {
+                "resource_performer": "Ethics Committee",
+                "resource_consumer": "Ethics Committee",
+                "activity": "review protocols"
+            }
+        ]
+    },
+    "graph_03": {
+        "case_ids": [
+            "3"
+        ],
+        "nodes": [
+            {
+                "resource": "Pharmaceutical Company"
+            },
+            {
+                "resource": "Investigational Review Board"
+            },
+            {
+                "resource": "Ethics Committee"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Investigational Review Board",
+                "activity": "send protocols"
+            },
+            {
+                "resource_performer": "Investigational Review Board",
+                "resource_consumer": "Pharmaceutical Company",
+                "activity": "review protocols"
+            },
+            {
+                "resource_performer": "Pharmaceutical Company",
+                "resource_consumer": "Ethics Committee",
+                "activity": "handover protocols"
+            }
+        ]
+    }
+}

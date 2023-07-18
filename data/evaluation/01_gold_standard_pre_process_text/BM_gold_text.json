@@ -1,0 +1,78 @@
+{
+    "actors": [
+        {
+            "actor_id": 1,
+            "actor_name": ["Sales Department", "Member of the Sales Department"]
+        },
+        {
+            "actor_id": 2,
+            "actor_name": "Storehouse"
+        },
+        {
+            "actor_id": 3,
+            "actor_name": "Engineering Department"
+        },
+        {
+            "actor_id": 4,
+            "actor_name": "Customer"
+        }
+    ],
+    "control_flow": [
+        {
+            "control_flow_id": 1,
+            "human_authors_activity_choice": "receive order",
+            "actor_performer": null,
+            "actor_receiver": 1,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 2,
+            "human_authors_activity_choice": "reject order",
+            "actor_performer": 1,
+            "actor_receiver": 1,
+            "terminating_activity": true
+        },
+        {
+            "control_flow_id": 3,
+            "human_authors_activity_choice": ["accept order", "inform departments of acceptance"],
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 4,
+            "human_authors_activity_choice": ["accept order", "inform departments of acceptance"],
+            "actor_performer": 1,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 5,
+            "human_authors_activity_choice": ["reserve part", "back-order part", "process part list"],
+            "actor_performer": 2,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 6,
+            "human_authors_activity_choice": "prepare assembly",
+            "actor_performer": 3,
+            "actor_receiver": 3,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 7,
+            "human_authors_activity_choice": "finished bicycle assembly",
+            "actor_performer": 3,
+            "actor_receiver": 1,
+            "terminating_activity": false
+        },
+        {
+            "control_flow_id": 8,
+            "human_authors_activity_choice": "ship bicycle",
+            "actor_performer": 1,
+            "actor_receiver": [null, 4],
+            "terminating_activity": true
+        }
+    ]
+}

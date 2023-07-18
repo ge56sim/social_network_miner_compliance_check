@@ -1,0 +1,71 @@
+{
+  "graph_01": {
+
+    "nodes": [
+      {
+        "resource": ["Sales Department", "Member of the Sales Department"]
+      }
+    ],
+
+    "edges": [
+        {
+            "resource_performer": "Sales Department",
+            "resource_consumer": "Sales Department",
+            "activity": "reject order"
+        }
+    ]
+  },
+
+    "graph_02": {
+
+    "nodes": [
+      {
+        "resource": ["Sales Department", "Member of the Sales Department"]
+      },
+      {
+        "resource": "Storehouse"
+      },
+      {
+        "resource": "Engineering Department"
+      },
+      {
+        "optional": true,
+        "resource": "Customer"
+      }
+    ],
+
+    "edges": [
+      {
+            "resource_performer": "Sales Department",
+            "resource_consumer": "Storehouse",
+            "activity": ["accept order", "inform departments of acceptance"]
+      },
+      {
+            "resource_performer": "Sales Department",
+            "resource_consumer": "Engineering Department",
+            "activity": ["accept order", "inform departments of acceptance"]
+      },
+      {
+            "actor_performer": "Storehouse",
+            "resource_consumer": "Engineering Department",
+            "activity": ["reserve part", "back-order part", "process part list"]
+      },
+      {
+            "resource_performer": "Engineering Department",
+            "resource_consumer": "Engineering Department",
+            "activity": "prepare assembly"
+      },
+      {
+            "resource_performer": "Engineering Department",
+            "resource_consumer": "Sales Department",
+            "activity": "finished bicycle assembly"
+      },
+      {
+            "optional": true,
+            "resource_performer": "Sales Department",
+            "resource_consumer": "Customer",
+            "activity": "ship bicycle"
+      }
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+    "pairs": [
+        {
+            "id": 1,
+            "case_ids": [
+                "034d5aee-04a0-419d-9d47-57ce11929388",
+                "515d4212-8684-4bac-a863-47c927b5cf98",
+                "525c228e-caa2-43be-a8e0-3151947f91a7",
+                "5a7967f4-f7e6-4837-96e9-12a395f5d786",
+                "5d4ac079-7a38-4706-b7ae-9ecb41ddca45",
+                "8cc15815-7cf3-4a9f-9528-1605a6442375",
+                "a9143c81-ace3-41ec-bcf9-10cca092e519",
+                "ac231ef7-61a6-43c5-b5de-694c0964ba99",
+                "ed7a8e48-46f5-4f71-bd29-fc19b6172084",
+                "eefbf3e9-c4cc-477e-80c1-355d76669ce6"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "draft schedule of meetings"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "add draft dates to calendars"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "suggest modifications"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "check dates"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "recheck dates"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "looks for conflicts"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "send final schedule to committee members"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "check diaries"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "",
+                    "Activity": "advice of conflicts"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "case_ids": [
+                "0aa239c3-e167-4dc4-a8a4-ec56660d1312",
+                "1f949332-7909-42fe-869c-cbcf8550d1b6"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "draft schedule of meetings"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "add draft dates to calendars"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "check dates"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "suggest modifications"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "looks for conflicts"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "recheck dates"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "send final schedule to committee members"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "check diaries"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "",
+                    "Activity": "advice of conflicts"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "case_ids": [
+                "156758c4-8a3d-492e-b720-0b4dc927a971",
+                "45930345-be1d-4989-865e-2dfc26768bf2",
+                "ddf7d4ae-fd86-4c75-a36d-05e85fb60c84",
+                "f2605dff-de2e-48de-ac15-dbb9046d0376",
+                "f39c45df-f935-4705-9093-7736dece5055"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "draft schedule of meetings"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "add draft dates to calendars"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "check dates"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "suggest modifications"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "recheck dates"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "looks for conflicts"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "send final schedule to committee members"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "check diaries"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "",
+                    "Activity": "advice of conflicts"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "case_ids": [
+                "3d6ca080-6641-409e-8b6e-1050ca824384"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "draft schedule of meetings"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "add draft dates to calendars"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "suggest modifications"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "check dates"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "coordination unit",
+                    "Activity": "looks for conflicts"
+                },
+                {
+                    "Resource Performer": "coordination unit",
+                    "Resource Consumer": "u",
+                    "Activity": "recheck dates"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "send final schedule to committee members"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "u",
+                    "Activity": "check diaries"
+                },
+                {
+                    "Resource Performer": "u",
+                    "Resource Consumer": "",
+                    "Activity": "advice of conflicts"
+                }
+            ]
+        }
+    ]
+}

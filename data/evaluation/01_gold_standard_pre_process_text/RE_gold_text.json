@@ -1,0 +1,90 @@
+{
+  "actors": [
+    {
+      "actor_id": 1,
+      "actor_name": "Pharmaceutical Company"
+    },
+    {
+      "actor_id": 2,
+      "actor_name": "Clinical Research Organization"
+    },
+    {
+      "actor_id": 3,
+      "actor_name": "Investigational Review Board"
+    },
+    {
+      "actor_id": 4,
+      "actor_name": "Ethics Committee"
+    },
+    {
+      "actor_id": 5,
+      "actor_name": "Pharmacies and Healthcare Providers",
+      "additional_info": "one type of resource, XOR resource connection"
+    }
+  ],
+  "control_flow": [
+    {
+      "control_flow_id": 1,
+      "human_authors_activity_choice": "send research approaches and results",
+      "actor_performer": 1,
+      "actor_receiver": 2,
+      "terminating_activity": false
+    },
+    {
+      "control_flow_id": 2,
+      "human_authors_activity_choice": "send back clinical trial results",
+      "actor_performer": 2,
+      "actor_receiver": 1,
+      "terminating_activity": false
+    },
+    {
+      "control_flow_id": 3,
+      "human_authors_activity_choice": "forward clinical trial protocol",
+      "actor_performer": 1,
+      "actor_receiver": 3,
+      "terminating_activity": false
+    },
+    {
+      "control_flow_id": 4,
+      "human_authors_activity_choice": "hand over protocols",
+      "actor_performer": 3,
+      "actor_receiver": 4,
+      "terminating_activity": false
+    },
+    {
+      "control_flow_id": 5,
+      "human_authors_activity_choice": "review protocols",
+      "actor_performer": 3,
+      "actor_receiver": 3,
+      "terminating_activity": false
+    },
+    {
+      "control_flow_id": 6,
+      "human_authors_activity_choice": "review protocols",
+      "actor_performer": 4,
+      "actor_receiver": 4,
+      "terminating_activity": false
+    },
+        {
+      "control_flow_id": 7,
+      "human_authors_activity_choice": "receive rejection",
+      "actor_performer": 3,
+      "actor_receiver": 1,
+      "terminating_activity": true
+    },
+    {
+      "control_flow_id": 8,
+      "human_authors_activity_choice": "receive acceptance",
+      "actor_performer": 3,
+      "actor_receiver": 1,
+      "terminating_activity": false
+    },
+        {
+      "control_flow_id": 9,
+      "human_authors_activity_choice": "contact",
+      "actor_performer": 1,
+      "actor_receiver": 5,
+      "terminating_activity": true
+    }
+  ]
+}

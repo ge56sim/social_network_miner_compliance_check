@@ -1,0 +1,145 @@
+{
+    "actors": [
+        {
+            "actor_id": 1,
+            "actor_name": "Employee"
+        },
+        {
+            "actor_id": 2,
+            "actor_name": "Travel Administration"
+        },
+        {
+            "actor_id": 3,
+            "actor_name": "Budget Owner/Supervisor"
+        },
+        {
+            "actor_id": 4,
+            "actor_name": "Director"
+        }
+    ],
+    "activities": [
+        {
+            "activity_id": 1,
+            "activity_name": "Submit Request"
+        },
+        {
+            "activity_id": 2,
+            "activity_name": "Approve Request"
+        },
+        {
+            "activity_id": 3,
+            "activity_name": "Reject Request"
+        },
+        {
+            "activity_id": 4,
+            "activity_name": "Resubmit Request"
+        },
+        {
+            "activity_id": 5,
+            "activity_name": "Request Payment"
+        },
+        {
+            "activity_id": 6,
+            "activity_name": "Perform Payment"
+        },
+        {
+            "activity_id": 7,
+            "activity_name": "Submit Travel Declaration"
+        },
+        {
+            "activity_id": 8,
+            "activity_name": "Submit Reimbursement Request"
+        },
+        {
+            "activity_id": 9,
+            "activity_name": "Submit International Declaration"
+        },
+        {
+            "activity_id": 10,
+            "activity_name": "File Travel Permit"
+        }
+    ],
+    "control_flow": [
+        {
+            "control_flow_id": 1,
+            "activity_from": 1,
+            "activity_to": 2,
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 2,
+            "activity_from": 2,
+            "activity_to": 3,
+            "actor_performer": 2,
+            "actor_receiver": 1,
+            "terminating_activity": false,
+            "flow_type": "conditional"
+        },
+        {
+            "control_flow_id": 3,
+            "activity_from": 3,
+            "activity_to": 4,
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 4,
+            "activity_from": 2,
+            "activity_to": 5,
+            "actor_performer": 2,
+            "actor_receiver": 3,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 5,
+            "activity_from": 5,
+            "activity_to": 6,
+            "actor_performer": 3,
+            "actor_receiver": 3,
+            "terminating_activity": true,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 6,
+            "activity_from": 10,
+            "activity_to": 7,
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 7,
+            "activity_from": 7,
+            "activity_to": 8,
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 8,
+            "activity_from": 8,
+            "activity_to": 9,
+            "actor_performer": 1,
+            "actor_receiver": 2,
+            "terminating_activity": false,
+            "flow_type": "sequential"
+        },
+        {
+            "control_flow_id": 9,
+            "activity_from": 9,
+            "activity_to": null,
+            "actor_performer": 2,
+            "actor_receiver": null,
+            "terminating_activity": true,
+            "flow_type": "sequential"
+        }
+    ]
+}

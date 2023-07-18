@@ -1,0 +1,249 @@
+{
+    "pairs": [
+        {
+            "id": 1,
+            "case_ids": [
+                "09dffeb3-146f-4718-99b2-89af1b2787e5"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "receive order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "accept order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "inform storehouse and engineering department"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "prepare for assembling the ordered bicycle"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "process part list of order"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "check required quantity of each part"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "reserve part"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "assemble bicycle"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "",
+                    "Activity": "ship bicycle to customer"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "case_ids": [
+                "0f4fb584-407d-4840-a5e1-ecff10e05f65",
+                "425f63e9-34a1-4274-a2b0-819c59b8b4af",
+                "55a961a9-9aab-4b0f-8155-53c3a1700603",
+                "5a845f65-49d2-4528-bb7f-2507e4a0c5ef",
+                "69e80bd2-342e-457d-879e-640ac3b32ff8",
+                "80177a8f-1e77-4f7e-b460-f88bf9bc6d8d",
+                "98bbd656-6c7c-4025-b16e-ce2c050bcafb",
+                "aa6636ec-992a-408e-86a6-6f23e698ba41",
+                "b06c78fc-803a-4732-999f-da45764e9b14",
+                "bee3130c-0d68-48c2-af10-ee0450b4bceb",
+                "fce28d30-dd4b-4fdc-a997-1eb0dccbe754"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "receive order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "",
+                    "Activity": "reject order"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "case_ids": [
+                "2ee9772c-a1c1-4ea3-b837-3c69425c7868",
+                "b02794fe-c196-426d-972e-cfa16bdbf08a",
+                "ea1bc04d-6102-4c16-b3b2-465c38820004"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "receive order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "accept order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "inform storehouse and engineering department"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "process part list of order"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "prepare for assembling the ordered bicycle"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "check required quantity of each part"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "back-order part"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "assemble bicycle"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "",
+                    "Activity": "ship bicycle to customer"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "case_ids": [
+                "4d4879a7-c2fb-409d-a914-9a65f07477d4",
+                "61b9a435-db13-4fae-bc41-2ffb58214d16",
+                "ae4b8df4-79bf-491a-a6f7-5fc0f121b9ab"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "receive order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "accept order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "inform storehouse and engineering department"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "process part list of order"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "prepare for assembling the ordered bicycle"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "check required quantity of each part"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "reserve part"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "assemble bicycle"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "",
+                    "Activity": "ship bicycle to customer"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "case_ids": [
+                "965aa6ee-c993-46c0-879a-47006750b349",
+                "c0f3a510-6726-42fc-bc92-29de4a415272"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "receive order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "accept order"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "inform storehouse and engineering department"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "prepare for assembling the ordered bicycle"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "process part list of order"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "storehouse",
+                    "Activity": "check required quantity of each part"
+                },
+                {
+                    "Resource Performer": "storehouse",
+                    "Resource Consumer": "engineering department",
+                    "Activity": "back-order part"
+                },
+                {
+                    "Resource Performer": "engineering department",
+                    "Resource Consumer": "sales department",
+                    "Activity": "assemble bicycle"
+                },
+                {
+                    "Resource Performer": "sales department",
+                    "Resource Consumer": "",
+                    "Activity": "ship bicycle to customer"
+                }
+            ]
+        }
+    ]
+}

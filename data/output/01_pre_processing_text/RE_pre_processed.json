@@ -1,0 +1,119 @@
+{
+  "actors": [
+    {
+      "actor_id": 1,
+      "actor_name": "Pharmaceutical Company"
+    },
+    {
+      "actor_id": 2,
+      "actor_name": "Clinical Research Organization"
+    },
+    {
+      "actor_id": 3,
+      "actor_name": "Investigational Review Board"
+    },
+    {
+      "actor_id": 4,
+      "actor_name": "Ethics Committee"
+    },
+    {
+      "actor_id": 5,
+      "actor_name": "Pharmacies and Healthcare Providers"
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": 1,
+      "activity_name": "Send Research Approaches and Results"
+    },
+    {
+      "activity_id": 2,
+      "activity_name": "Conduct Clinical Trial"
+    },
+    {
+      "activity_id": 3,
+      "activity_name": "Forward Clinical Trial Protocols"
+    },
+    {
+      "activity_id": 4,
+      "activity_name": "Hand Over Protocols"
+    },
+    {
+      "activity_id": 5,
+      "activity_name": "Review Protocols"
+    },
+    {
+      "activity_id": 6,
+      "activity_name": "Receive Acceptance or Rejection"
+    },
+    {
+      "activity_id": 7,
+      "activity_name": "Contact Pharmacies and Healthcare Providers"
+    }
+  ],
+  "control_flow": [
+    {
+      "control_flow_id": 1,
+      "activity_from": 1,
+      "activity_to": 2,
+      "actor_performer": 1,
+      "actor_receiver": 2,
+      "terminating_activity": false,
+      "flow_type": "sequential"
+    },
+    {
+      "control_flow_id": 2,
+      "activity_from": 2,
+      "activity_to": 3,
+      "actor_performer": 2,
+      "actor_receiver": 1,
+      "terminating_activity": false,
+      "flow_type": "sequential"
+    },
+    {
+      "control_flow_id": 3,
+      "activity_from": 3,
+      "activity_to": 4,
+      "actor_performer": 1,
+      "actor_receiver": 3,
+      "terminating_activity": false,
+      "flow_type": "sequential"
+    },
+    {
+      "control_flow_id": 4,
+      "activity_from": 4,
+      "activity_to": 5,
+      "actor_performer": 3,
+      "actor_receiver": 4,
+      "terminating_activity": false,
+      "flow_type": "sequential"
+    },
+    {
+      "control_flow_id": 5,
+      "activity_from": 5,
+      "activity_to": 6,
+      "actor_performer": 3,
+      "actor_receiver": 1,
+      "terminating_activity": false,
+      "flow_type": "conditional"
+    },
+    {
+      "control_flow_id": 6,
+      "activity_from": 5,
+      "activity_to": 6,
+      "actor_performer": 4,
+      "actor_receiver": 1,
+      "terminating_activity": false,
+      "flow_type": "conditional"
+    },
+    {
+      "control_flow_id": 7,
+      "activity_from": 6,
+      "activity_to": 7,
+      "actor_performer": 1,
+      "actor_receiver": 5,
+      "terminating_activity": true,
+      "flow_type": "conditional"
+    }
+  ]
+}

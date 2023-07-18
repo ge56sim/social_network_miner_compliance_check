@@ -1,0 +1,20 @@
+#
+# This file is part of social_network_miner_compliance_check.
+#
+# social_network_miner_compliance_check is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+#
+# social_network_miner_compliance_check is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+# details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with social_network_miner_compliance_check (file COPYING in the main directory). If not, see
+# http://www.gnu.org/licenses/.
+
+Prompt:
+
+Given the following business process, identify the actors, activities, and control flow, and present the results in JSON format. Each actor should contain 'actor_id', and 'actor_name'. Each activity should contain 'activity_id'(int), and 'activity_name'(string). The 'control_flow' should be represented as a sequence of transitions with the fields:'control_flow_id'(int), 'activity_from' stores the activity being executed, 'activity_to' indicates the activity that is executed next, 'actor_performer', 'actor_receiver', 'terminating_activity' with values true or false (boolean), this is true when the activity will terminate the process, and a 'flow_type' ('sequential' or 'conditional'). Each transition stores exactly one 'actor_performer' and exactly one 'actor_receiver'. In case multiple 'actor_performer' or 'actor_receiver' exist, (e.g., for parallel activities) create multiple transitions for that activity.

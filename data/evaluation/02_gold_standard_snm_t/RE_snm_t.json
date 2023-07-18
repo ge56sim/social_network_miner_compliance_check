@@ -1,0 +1,117 @@
+{
+  "graph_01": {
+    "nodes": [
+      {
+        "resource": "Pharmaceutical Companies"
+      },
+      {
+        "resource": "Clinical Research Organizations"
+      },
+      {
+        "resource": "Investigational Review Board"
+      },
+      {
+        "resource": "Ethics Committee"
+      }
+    ],
+    "edges": [
+      {
+        "resource_performer": "Pharmaceutical Companies",
+        "resource_consumer": "Clinical Research Organizations",
+        "activity": "send research approaches and results"
+      },
+      {
+        "resource_performer": "Clinical Research Organizations",
+        "resource_consumer": "Pharmaceutical Companies",
+        "activity": "send back clinical trial results"
+      },
+      {
+        "resource_performer": "Pharmaceutical Companies",
+        "resource_consumer": "Investigational Review Board",
+        "activity": "send research approaches and results"
+      },
+      {
+        "resource_performer": "Investigational Review Board",
+        "resource_consumer": "Ethics Committee",
+        "activity": "hand over protocols"
+      },
+      {
+        "resource_performer": "Investigational Review Board",
+        "resource_consumer": "Investigational Review Board",
+        "activity": "review protocol"
+      },
+      {
+        "resource_performer": "Ethics Committee",
+        "resource_consumer": "Ethics Committee",
+        "activity": "review protocol"
+      },
+      {
+        "resource_performer": "Investigational Review Board",
+        "resource_consumer": "Pharmaceutical Companies",
+        "activity": "receive rejection"
+      }
+    ]
+  },
+  "graph_02": {
+    "nodes": [
+      {
+        "resource": "Pharmaceutical Companies"
+      },
+      {
+        "resource": "Clinical Research Organizations"
+      },
+      {
+        "resource": "Investigational Review Board"
+      },
+      {
+        "resource": "Ethics Committee"
+      },
+      {
+        "resource": "Pharmacies and Healthcare Providers"
+      }
+
+    ],
+    "edges": [
+      {
+        "resource_performer": "Pharmaceutical Companies",
+        "resource_consumer": "Clinical Research Organizations",
+        "activity": "send research approaches and results"
+      },
+      {
+        "resource_performer": "Clinical Research Organizations",
+        "resource_consumer": "Pharmaceutical Companies",
+        "activity": "send back clinical trial results"
+      },
+      {
+        "resource_performer": "Pharmaceutical Companies",
+        "resource_consumer": "Investigational Review Board",
+        "activity": "send research approaches and results"
+      },
+      {
+        "resource_performer": "Investigational Review Board",
+        "resource_consumer": "Ethics Committee",
+        "activity": "hand over protocols"
+      },
+      {
+        "resource_performer": "Investigational Review Board",
+        "resource_consumer": "Investigational Review Board",
+        "activity": "review protocol"
+      },
+      {
+        "resource_performer": "Ethics Committee",
+        "resource_consumer": "Ethics Committee",
+        "activity": "review protocol"
+      },
+      {
+        "resource_performer": "Investigational Review Board",
+        "resource_consumer": "Pharmaceutical Companies",
+        "activity": "receive acceptance"
+      },
+      {
+        "resource_performer": "Pharmaceutical Companies",
+        "resource_consumer": "Pharmacies and Healthcare Providers",
+        "activity": "contact"
+      }
+    ]
+  }
+}

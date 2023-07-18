@@ -1,0 +1,296 @@
+{
+    "graph_01": {
+        "case_ids": [
+            "034d5aee-04a0-419d-9d47-57ce11929388",
+            "515d4212-8684-4bac-a863-47c927b5cf98",
+            "525c228e-caa2-43be-a8e0-3151947f91a7",
+            "5a7967f4-f7e6-4837-96e9-12a395f5d786",
+            "5d4ac079-7a38-4706-b7ae-9ecb41ddca45",
+            "8cc15815-7cf3-4a9f-9528-1605a6442375",
+            "a9143c81-ace3-41ec-bcf9-10cca092e519",
+            "ac231ef7-61a6-43c5-b5de-694c0964ba99",
+            "ed7a8e48-46f5-4f71-bd29-fc19b6172084",
+            "eefbf3e9-c4cc-477e-80c1-355d76669ce6"
+        ],
+        "nodes": [
+            {
+                "resource": "coordination unit"
+            },
+            {
+                "resource": "u"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "draft schedule of meetings"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "recheck dates"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "looks for conflicts"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "send final schedule to committee members"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "check diaries"
+            }
+        ]
+    },
+    "graph_02": {
+        "case_ids": [
+            "0aa239c3-e167-4dc4-a8a4-ec56660d1312",
+            "1f949332-7909-42fe-869c-cbcf8550d1b6"
+        ],
+        "nodes": [
+            {
+                "resource": "coordination unit"
+            },
+            {
+                "resource": "u"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "draft schedule of meetings"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "looks for conflicts"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "recheck dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "send final schedule to committee members"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "check diaries"
+            }
+        ]
+    },
+    "graph_03": {
+        "case_ids": [
+            "156758c4-8a3d-492e-b720-0b4dc927a971",
+            "45930345-be1d-4989-865e-2dfc26768bf2",
+            "ddf7d4ae-fd86-4c75-a36d-05e85fb60c84",
+            "f2605dff-de2e-48de-ac15-dbb9046d0376",
+            "f39c45df-f935-4705-9093-7736dece5055"
+        ],
+        "nodes": [
+            {
+                "resource": "coordination unit"
+            },
+            {
+                "resource": "u"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "draft schedule of meetings"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "recheck dates"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "looks for conflicts"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "send final schedule to committee members"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "check diaries"
+            }
+        ]
+    },
+    "graph_04": {
+        "case_ids": [
+            "3d6ca080-6641-409e-8b6e-1050ca824384"
+        ],
+        "nodes": [
+            {
+                "resource": "coordination unit"
+            },
+            {
+                "resource": "u"
+            }
+        ],
+        "edges": [
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "draft schedule of meetings"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "add draft dates to calendars"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "suggest modifications"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "coordination unit",
+                "activity": "check dates"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "coordination unit",
+                "activity": "looks for conflicts"
+            },
+            {
+                "resource_performer": "coordination unit",
+                "resource_consumer": "u",
+                "activity": "recheck dates"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "send final schedule to committee members"
+            },
+            {
+                "resource_performer": "u",
+                "resource_consumer": "u",
+                "activity": "check diaries"
+            }
+        ]
+    }
+}

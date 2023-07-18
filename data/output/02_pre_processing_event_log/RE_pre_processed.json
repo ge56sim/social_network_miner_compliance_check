@@ -1,0 +1,104 @@
+{
+    "pairs": [
+        {
+            "id": 1,
+            "case_ids": [
+                "1",
+                "4"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "Pharmaceutical Company",
+                    "Resource Consumer": "Investigational Review Board",
+                    "Activity": "send protocols"
+                },
+                {
+                    "Resource Performer": "Investigational Review Board",
+                    "Resource Consumer": "Investigational Review Board",
+                    "Activity": "hand over protocols"
+                },
+                {
+                    "Resource Performer": "Investigational Review Board",
+                    "Resource Consumer": "Ethics Committee",
+                    "Activity": "review protocols"
+                },
+                {
+                    "Resource Performer": "Ethics Committee",
+                    "Resource Consumer": "Investigational Review Board",
+                    "Activity": "review protocols"
+                },
+                {
+                    "Resource Performer": "Investigational Review Board",
+                    "Resource Consumer": "Pharmacies and Healthcare Providers",
+                    "Activity": "receive acceptance"
+                },
+                {
+                    "Resource Performer": "Pharmacies and Healthcare Providers",
+                    "Resource Consumer": "",
+                    "Activity": "contact pharmacies"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "case_ids": [
+                "2"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "Pharmaceutical Company",
+                    "Resource Consumer": "Ethics Committee",
+                    "Activity": "send protocols"
+                },
+                {
+                    "Resource Performer": "Ethics Committee",
+                    "Resource Consumer": "Investigational Review Board",
+                    "Activity": "review protocols"
+                },
+                {
+                    "Resource Performer": "Investigational Review Board",
+                    "Resource Consumer": "Ethics Committee",
+                    "Activity": "handover protocols"
+                },
+                {
+                    "Resource Performer": "Ethics Committee",
+                    "Resource Consumer": "Ethics Committee",
+                    "Activity": "review protocols"
+                },
+                {
+                    "Resource Performer": "Ethics Committee",
+                    "Resource Consumer": "",
+                    "Activity": "receive rejection"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "case_ids": [
+                "3"
+            ],
+            "network_trace": [
+                {
+                    "Resource Performer": "Pharmaceutical Company",
+                    "Resource Consumer": "Investigational Review Board",
+                    "Activity": "send protocols"
+                },
+                {
+                    "Resource Performer": "Investigational Review Board",
+                    "Resource Consumer": "Pharmaceutical Company",
+                    "Activity": "review protocols"
+                },
+                {
+                    "Resource Performer": "Pharmaceutical Company",
+                    "Resource Consumer": "Ethics Committee",
+                    "Activity": "handover protocols"
+                },
+                {
+                    "Resource Performer": "Ethics Committee",
+                    "Resource Consumer": "",
+                    "Activity": "review protocols"
+                }
+            ]
+        }
+    ]
+}
