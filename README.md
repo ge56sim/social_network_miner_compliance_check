@@ -1,6 +1,6 @@
 # Social Network Mining From Natural Language Text and Event Logs for Compliance Deviation Checks 
 This repository contains the evaluation for the CoopIS 2023 submission and can be used to analyze and detect compliance deviations in trace graphs.
-The trace graphs represent the interaction and communication traffic between resources and are checked against a ground truth graph object from a corresponding from process description
+The trace graphs represent the interaction and communication traffic between resources and are checked against a ground truth graph object from a corresponding process description.
 
 ## Set up:
 
@@ -18,7 +18,7 @@ conda env create -f environment.yml
 ```
 3. After installing all dependencies successfully, activate the environment:
 ```bash
-conda activate org_mining
+conda activate snm_checker
 ```
 4. To run the project:
 ```
