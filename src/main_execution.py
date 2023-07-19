@@ -153,43 +153,36 @@ def execute_social_network_mining_compliance_deviation_process():
 
     # TODO: Event Log File Paths:
     # Input Synthetic Event Logs:
-
-    # Bicycle Manufacturing:
-    # path_log_bm = "/data/input/log/selected/BM_event_log.csv"
-    # log_file_path_bm = home_path + path_log_bm
-
-    # Schedule Meeting:
+    # BM
+    path_log_bm = "/data/input/log/selected/BM_event_log.csv"
+    log_file_path_bm = home_path + path_log_bm
+    # SM:
     # path_log_sm = "/data/input/log/selected/SM_event_log.csv"
     # log_file_path_sm = home_path + path_log_sm
-
-    # Running Example:
-    path_log_re = "/data/input/log/selected/RE_event_log.csv"
-    log_file_path_re = home_path + path_log_re
-
-    # Input Real-World Event Log:
+    # RE:
+    # path_log_re = "/data/input/log/selected/RE_event_log.csv"
+    # log_file_path_re = home_path + path_log_re
     # BPIC:
     # path_log_bpic = "/data/input/log/selected/BPIC_event_log.csv"
     # log_file_path_bpic = home_path + path_log_bpic
 
-    #
     # 1. Pre-Process Text
-
     # This is already done with an LLM, the pre-processed file is already stored in the data output folder
     # TODO: Pre-Processed Text files:
     # BM
-    # path_pre_processed_text_bm = home_path + '/data/output/01_pre_processing_text/BM_pre_processed.json'
+    path_pre_processed_text_bm = home_path + '/data/output/01_pre_processing_text/BM_pre_processed.json'
     # SM
     # path_pre_processed_text_sm = home_path + '/data/output/01_pre_processing_text/SM_pre_processed.json'
     # RE
-    path_pre_processed_text_re = home_path + '/data/output/01_pre_processing_text/RE_pre_processed.json'
+    # path_pre_processed_text_re = home_path + '/data/output/01_pre_processing_text/RE_pre_processed.json'
     # BPIC
     # path_pre_processed_text_bpic2020 = home_path + '/data/output/01_pre_processing_text/BPIC_pre_processed.json'
 
-    #
     # 2. Pre-Process Event Log
 
     # Required data:
-    log_file_path = log_file_path_re
+    # TODO: Change the log file path to the appropriate, currently ..._bm
+    log_file_path = log_file_path_bm
     case_id_column_name = 'concept:instance'
     activity_column_name = 'concept:name'
     timestamp_key_name = 'time:timestamp'
@@ -200,16 +193,17 @@ def execute_social_network_mining_compliance_deviation_process():
 
     # TODO: Output File Name Pre-Processed Event Log:
     # BM
-    # file_name_bm_pre_process_event_log = 'BM_pre_processed'
+    file_name_bm_pre_process_event_log = 'BM_pre_processed'
     # SM
     # file_name_sm_pre_process_event_log = 'SM_pre_processed'
     # RE
-    file_name_re_pre_process_event_log = 'RE_pre_processed'
+    # file_name_re_pre_process_event_log = 'RE_pre_processed'
     # BPIC
     # file_name_bpic_pre_process_event_log = 'bpic_pre_processed'
 
     output_path_pre_process = '/data/output/02_pre_processing_event_log/'
 
+    # TODO: change the file_name
     path_pre_processed_event_log = pre_process_event_log(log_file_path=log_file_path,
                                                          case_id_column_name=case_id_column_name,
                                                          activity_column_name=activity_column_name,
@@ -217,61 +211,59 @@ def execute_social_network_mining_compliance_deviation_process():
                                                          resource_key_name=resource_key_name,
                                                          used_separator=used_separator,
                                                          home_path=home_path,
-                                                         file_name=file_name_re_pre_process_event_log,
+                                                         file_name=file_name_bm_pre_process_event_log,
                                                          output_path=output_path_pre_process
                                                          )
 
-    #
     # 3. Graphs constructed from the text
 
     # TODO: Graph data of Text:
     # BM
-    # graphs_text_bm = graph_construction_text(pre_processed_text_path=path_pre_processed_text_bm)
+    graphs_text_bm = graph_construction_text(pre_processed_text_path=path_pre_processed_text_bm)
     # SM
     # graphs_text_sm = graph_construction_text(pre_processed_text_path=path_pre_processed_text_sm)
     # RE
-    graphs_text_re = graph_construction_text(pre_processed_text_path=path_pre_processed_text_re)
+    # graphs_text_re = graph_construction_text(pre_processed_text_path=path_pre_processed_text_bm)
     # BPIC
     # graphs_text_bpic2020 = graph_construction_text(pre_processed_text_path=path_pre_processed_text_bpic2020)
 
     # Store the graphs persistently
     # TODO: Output File Names for Text Graph:
     # BM
-    # graph_text_file_name_bm = "BM_graphs"
+    graph_text_file_name_bm = "BM_graphs"
     # SM
     # graph_text_file_name_sm = "SM_graphs"
     # RE
-    graph_text_file_name_re = "RE_graphs"
+    # graph_text_file_name_re = "RE_graphs"
     # BPIC
     # graph_text_file_name_bpic2020 = "BPIC2020_graphs"
 
     output_path_graphs_text = home_path + "/data/output/03_snm_t/"
 
     # Change Parameters to create the graphs for each description
-    # save_graphs_to_json_text(graphs=graphs_text_bpic2020,
-    #                         file_name=graph_text_file_name_bpic2020,
-    #                         output_path=output_path_graphs_text)
+    save_graphs_to_json_text(graphs=graphs_text_bpic2020,
+                             file_name=graph_text_file_name_bm,
+                             output_path=output_path_graphs_text)
 
-    #
     # 4. Graphs constructed from the event log
 
     # TODO: Output File Names for Event Log Graph:
     # BM
-    # graphs_event_log_file_name_bm = "BM_graphs"
+    graphs_event_log_file_name_bm = "BM_graphs"
     # SM
     # graphs_event_log_file_name_sm = "SM_graphs"
     # RE
-    graphs_event_log_file_name_re = "RE_graphs"
+    # graphs_event_log_file_name_re = "RE_graphs"
     # BPIC
     # graphs_event_log_file_name_bpic = "BPIC_graphs"
 
     # TODO: Output File Names for Petri Net:
     # BM
-    # output_path_petri_net_bm = home_path + '/data/output/04_snm_el/petri_net_of_event_log/' + 'BM_petri_net.svg'
+    output_path_petri_net_bm = home_path + '/data/output/04_snm_el/petri_net_of_event_log/' + 'BM_petri_net.svg'
     # SM
     # output_path_petri_net_sm = home_path + '/data/output/04_snm_el/petri_net_of_event_log/' + 'SM_petri_net.svg'
     # RE
-    output_path_petri_net_re = home_path + '/data/output/04_snm_el/petri_net_of_event_log/' + 'RE_petri_net.svg'
+    # output_path_petri_net_re = home_path + '/data/output/04_snm_el/petri_net_of_event_log/' + 'RE_petri_net.svg'
     # BPIC
     # output_path_petri_net_bpic = home_path + '/data/output/04_snm_el/petri_net_of_event_log/' + 'BPIC_petri_net.svg'
 
@@ -280,12 +272,12 @@ def execute_social_network_mining_compliance_deviation_process():
 
     graphs_event_log = graph_construction_event_log(pre_processed_event_log_path=path_pre_processed_event_log,
                                                     event_log_path=log_file_path_re,
-                                                    output_path_petri_net=output_path_petri_net_re
+                                                    output_path_petri_net=output_path_petri_net_bm
                                                     )
 
     # Change Parameters to create the graphs for each trace in log
     save_graphs_to_json_event_log(graphs=graphs_event_log,
-                                  file_name=graphs_event_log_file_name_re,
+                                  file_name=graphs_event_log_file_name_bm,
                                   output_path=output_path_petri_graphs_event_log)
 
     #
@@ -293,14 +285,14 @@ def execute_social_network_mining_compliance_deviation_process():
 
     # TODO: Output File Names for standard and cluster visualization:
     # BM
-    # visualization_file_name_text_bm = "BM_text"
-    # visualization_file_name_event_log_bm = "BM_event_log"
+    visualization_file_name_text_bm = "BM_text"
+    visualization_file_name_event_log_bm = "BM_event_log"
     # SM
     # visualization_file_name_text_sm = "SM_text"
     # visualization_file_name_event_log_sm = "SM_event_log"
     # RE
-    visualization_file_name_text_re = "RE_text"
-    visualization_file_name_event_log_re = "RE_event_log"
+    # visualization_file_name_text_re = "RE_text"
+    # visualization_file_name_event_log_re = "RE_event_log"
     # BPIC
     # visualization_file_name_text_bpic = "BPIC_text"
     # visualization_file_name_event_log_bpic = "BPIC_event_log"
@@ -314,9 +306,9 @@ def execute_social_network_mining_compliance_deviation_process():
     relative_output_path_visualizations_clusters_event_log = "/data/output/05_visualization/clusters_included/event_log/"
 
     # Graph 05_visualization Text
-    visualization_graphs(graph_list=graphs_text_re,
+    visualization_graphs(graph_list=graphs_text_bm,
                          home_path=home_path,
-                         output_file_name=visualization_file_name_text_re,
+                         output_file_name=visualization_file_name_text_bm,
                          relative_output_path_visualizations_standard=relative_output_path_visualizations_standard_text,
                          relative_output_path_visualizations_clusters=relative_output_path_visualizations_clusters_text,
                          type_input='text')
@@ -324,7 +316,7 @@ def execute_social_network_mining_compliance_deviation_process():
     # Graph 05_visualization event log
     visualization_graphs(graph_list=graphs_event_log,
                          home_path=home_path,
-                         output_file_name=visualization_file_name_event_log_re,
+                         output_file_name=visualization_file_name_event_log_bm,
                          relative_output_path_visualizations_standard=relative_output_path_visualizations_standard_event_log,
                          relative_output_path_visualizations_clusters=relative_output_path_visualizations_clusters_event_log,
                          type_input='event_log')
@@ -333,13 +325,13 @@ def execute_social_network_mining_compliance_deviation_process():
 
     # TODO: Output File Names for compliance deviation visualization:
     # BM
-    # output_file_name_comp_dev_bm = "BM_compliance_deviation_graph_trace"
+    output_file_name_comp_dev_bm = "BM_compliance_deviation_graph_trace"
     # SM
     # output_file_name_comp_dev_sm = "SM_compliance_deviation_graph_trace"
     # RE
-    output_file_name_comp_dev_RE = "RE_compliance_deviation_graph_trace"
+    # output_file_name_comp_dev_re = "RE_compliance_deviation_graph_trace"
     # BPIC
-    # output_file_name_comp_dev_BPIC = "BPIC_compliance_deviation_graph_trace"
+    # output_file_name_comp_dev_bpic = "BPIC_compliance_deviation_graph_trace"
 
     relative_output_path_visualizations_cd = "/data/output/05_visualization/compliance_deviations/"
 
@@ -349,7 +341,7 @@ def execute_social_network_mining_compliance_deviation_process():
         trace_graph = data['graph']
 
         trace_graph, matched_gt_graph = match_trace_with_ground_truths(trace_graph=trace_graph,
-                                                                       list_of_ground_truths=graphs_text_re)
+                                                                       list_of_ground_truths=graphs_text_bm)
 
         deviating_graph_bm = create_compliance_deviating_graphs(trace_graph=trace_graph,
                                                                 matched_gt_graph=matched_gt_graph)
@@ -357,7 +349,7 @@ def execute_social_network_mining_compliance_deviation_process():
         visualization_compliance_deviation(graph_trace=trace_graph,
                                            graph_deviations=deviating_graph_bm,
                                            home_path=home_path,
-                                           file_name=output_file_name_comp_dev_RE + str(i),
+                                           file_name=output_file_name_comp_dev_bm + str(i),
                                            relative_output_path_compliance_deviations=relative_output_path_visualizations_cd
                                            )
 
