@@ -37,7 +37,7 @@ class EventLog:
         self.traces = traces
 
     def get_network_output_of_distinct_traces_in_event_log(self, resource_structure_type: str) -> list[dict[str, Union[int, dict[Any, list[str]]]]]:
-        # All Distinct Traces in the format: (list of case ids, Trac)
+        # All Distinct Traces in the format: (list of case ids, Trace)
         distinct_trace_list = self.__get_distinct_traces(resource_structure_type=resource_structure_type)
         # Output
         output_list = []
@@ -103,9 +103,6 @@ class EventLog:
                         # Distinct events
                         events_distinct = distinct_trace.get_events_of_trace()
                         # Check the list of event_ids
-
-                        # event_id_list = [event['Organizational_Unit'] + " " + event['Activity'] for event in events]
-                        # event_id_list_distinct = [distinct_event['Organizational_Unit'] + " " + distinct_event['Activity'] for distinct_event in events_distinct]
                         event_id_list = [event[resource_structure_type] + " " + event['Activity'] for event in events]
                         event_id_list_distinct = [distinct_event[resource_structure_type] + " " + distinct_event['Activity'] for distinct_event in events_distinct]
 

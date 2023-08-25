@@ -1,22 +1,22 @@
-﻿concept:instance,concept:name,time:timestamp,org:unit
-1,send protocols,12:09:00,Pharmaceutical Company
-1,hand over protocols,12:10:00,Investigational Review Board
-1,review protocols,12:11:00,Investigational Review Board
-1,review protocols,12:12:00,Ethics Committee
-1,receive acceptance,12:13:00,Investigational Review Board
-1,contact pharmacies,12:14:00,Pharmacies and Healthcare Providers
-2,send protocols,12:09:00,Pharmaceutical Company
-2,review protocols,12:10:00,Ethics Committee
-2,handover protocols,12:11:00,Investigational Review Board
-2,review protocols,12:12:00,Ethics Committee
-2,receive rejection,12:13:00,Ethics Committee
-3,send protocols,12:09:00,Pharmaceutical Company
-3,review protocols,12:10:00,Investigational Review Board
-3,handover protocols,12:11:00,Pharmaceutical Company
-3,review protocols,12:12:00,Ethics Committee
-4,send protocols,12:09:00,Pharmaceutical Company
-4,hand over protocols,12:10:00,Investigational Review Board
-4,review protocols,12:11:00,Investigational Review Board
-4,review protocols,12:12:00,Ethics Committee
-4,receive acceptance,12:13:00,Investigational Review Board
-4,contact pharmacies,12:14:00,Pharmacies and Healthcare Providers
+concept:instance,concept:name,time:timestamp,org:unit
+a,send protocols,12:09:00,Pharmaceutical Company
+a,hand over protocols,12:10:00,Investigational Review Board
+a,review protocols,12:11:00,Investigational Review Board
+a,review protocols,12:12:00,Ethics Committee
+a,receive acceptance,12:13:00,Investigational Review Board
+a,contact pharmacies,12:14:00,Pharmacies and Healthcare Providers
+b,send protocols,12:09:00,Pharmaceutical Company
+b,review protocols,12:10:00,Ethics Committee
+b,handover protocols,12:11:00,Investigational Review Board
+b,review protocols,12:12:00,Ethics Committee
+b,receive rejection,12:13:00,Ethics Committee
+c,send protocols,12:09:00,Pharmaceutical Company
+c,review protocols,12:10:00,Investigational Review Board
+c,handover protocols,12:11:00,Pharmaceutical Company
+c,review protocols,12:12:00,Ethics Committee
+d,send protocols,12:09:00,Pharmaceutical Company
+d,hand over protocols,12:10:00,Investigational Review Board
+d,review protocols,12:11:00,Investigational Review Board
+d,review protocols,12:12:00,Ethics Committee
+d,receive acceptance,12:13:00,Investigational Review Board
+d,contact pharmacies,12:14:00,Pharmacies and Healthcare Providers

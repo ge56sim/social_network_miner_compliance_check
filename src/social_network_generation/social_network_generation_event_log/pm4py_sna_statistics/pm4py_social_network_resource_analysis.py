@@ -32,7 +32,7 @@ def handover_of_work(path_log: str, case_id_name_in_log: str, activity_name_in_l
 def subcontracting(path_log: str, case_id_name_in_log: str, activity_name_in_log: str, resource_key: str):
     event_log = __csv_extractor_pm4py(path_log=path_log, case_id_name_in_log=case_id_name_in_log,
                                       activity_name_in_log=activity_name_in_log)
-    subcontracting_values = pm4py.discover_working_together_network(event_log, resource_key=resource_key)
+    subcontracting_values = pm4py.discover_subcontracting_network(event_log, resource_key=resource_key)
     return subcontracting_values
 
 
@@ -40,16 +40,16 @@ def subcontracting(path_log: str, case_id_name_in_log: str, activity_name_in_log
 def working_together(path_log: str, case_id_name_in_log: str, activity_name_in_log: str, resource_key: str):
     event_log = __csv_extractor_pm4py(path_log=path_log, case_id_name_in_log=case_id_name_in_log,
                                       activity_name_in_log=activity_name_in_log)
-    sim_activities_values = pm4py.discover_activity_based_resource_similarity(event_log, resource_key=resource_key)
-    return sim_activities_values
+    working_together_value = pm4py.discover_working_together_network(event_log, resource_key=resource_key)
+    return working_together_value
 
 
 # Similar Activities
 def similar_activities(path_log: str, case_id_name_in_log: str, activity_name_in_log: str, resource_key: str):
     event_log = __csv_extractor_pm4py(path_log=path_log, case_id_name_in_log=case_id_name_in_log,
                                       activity_name_in_log=activity_name_in_log)
-    working_together_values = pm4py.discover_handover_of_work_network(event_log, resource_key=resource_key)
-    return working_together_values
+    similar_activities_values = pm4py.discover_activity_based_resource_similarity(event_log, resource_key=resource_key)
+    return similar_activities_values
 
 
 # Take csv path as input and create a Pm4Py event log out of it.

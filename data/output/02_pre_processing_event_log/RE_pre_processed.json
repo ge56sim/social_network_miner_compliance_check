@@ -3,8 +3,8 @@
         {
             "id": 1,
             "case_ids": [
-                "1",
-                "4"
+                "a",
+                "d"
             ],
             "network_trace": [
                 {
@@ -42,7 +42,7 @@
         {
             "id": 2,
             "case_ids": [
-                "2"
+                "b"
             ],
             "network_trace": [
                 {
@@ -75,7 +75,7 @@
         {
             "id": 3,
             "case_ids": [
-                "3"
+                "c"
             ],
             "network_trace": [
                 {

@@ -46,7 +46,8 @@ def create_graph(json_file_path: str, event_log_file_path: str, file_path_store_
 
         # List of graphs for each trace as tuple:
         # Additionally return id and corresponding case ids for each trace
-        trace_network_results.append({'id': structure['id'], 'case_ids': structure['case_ids'], 'graph': (node_list, edge_list)})
+        trace_network_results.append(
+            {'id': structure['id'], 'case_ids': structure['case_ids'], 'graph': (node_list, edge_list)})
 
     return trace_network_results
 
@@ -166,47 +167,54 @@ def __get_parallel_activities_from_petri_net(event_log_file_path: str, file_path
             # Store first in and branch event
             list_of_in_and_branch_start_activities = []
             for in_and_activity in transition.out_arcs:
-                # Name of activity (transition) that is the first of the n in and branches
-                in_and_branch = list(in_and_activity.target.out_arcs)[0].target.name
-                # Add the first nodes in and branch to the list
-                list_of_in_and_branch_start_activities.append(in_and_branch)
 
-            # After the list of in branches is filled, fill list of next activities within a branch
-            # List of lists, either this list is empty, or for every and branch a list consist that stores the activities in that branch
-            list_of_and_branches = []
-            # Iterate through the list of first activities in respective branch:
-            for list_of_in_and_branch_start_activity in list_of_in_and_branch_start_activities:
+                # only if the activity is given:
+                if len(list(in_and_activity.target.out_arcs)) > 0:
+                    # Name of activity (transition) that is the first of the n in and branches
+                    in_and_branch = list(in_and_activity.target.out_arcs)[0].target.name
+                    # Add the first nodes in and branch to the list
+                    list_of_in_and_branch_start_activities.append(in_and_branch)
 
-                # List is filled with activities of the branches activity
-                intermediate_list_of_branch = [list_of_in_and_branch_start_activity]
-                # go through the whole path of the end element till end element is found:
-                end_path_found = False
-                while not end_path_found:
-                    for inter in intermediate_list_of_branch:
-                        # Iterate through transitions and check follow-up transition and add to list, if transition has only one incoming
-                        for transition_help in transitions:
-                            # Search the first follow-up activity (2nd) of the value in the list_start_activities
-                            if transition_help.name == inter:
+            if len(list_of_in_and_branch_start_activities) > 0:
 
-                                # Name of follow-up activity
-                                # Problem this would have two n > 1 out_arcs
-                                follow_up_transition = list(list(transition_help.out_arcs)[0].target.out_arcs)[
-                                    0].target.name
+                # After the list of in branches is filled, fill list of next activities within a branch
+                # List of lists, either this list is empty, or for every and branch a list consist that stores the activities in that branch
+                list_of_and_branches = []
+                # Iterate through the list of first activities in respective branch:
+                for list_of_in_and_branch_start_activity in list_of_in_and_branch_start_activities:
 
-                                # Check if this event has two incoming arcs
-                                for transition_help2 in transitions:
-                                    if transition_help2.name == follow_up_transition:
-                                        # End of and branch found
-                                        if len(transition_help2.in_arcs) > 1:
-                                            end_path_found = True
-                                            end_event_arcs = follow_up_transition
-                                            break
-                                        else:
-                                            # Add element to intermediate list
-                                            intermediate_list_of_branch.append(follow_up_transition)
-                                            break
-                # Add list of path
-                list_of_and_branches.append(intermediate_list_of_branch)
+                    # List is filled with activities of the branches activity
+                    intermediate_list_of_branch = [list_of_in_and_branch_start_activity]
+                    # go through the whole path of the end element till end element is found:
+                    end_path_found = False
+                    while not end_path_found:
+                        for inter in intermediate_list_of_branch:
+                            # Iterate through transitions and check follow-up transition and add to list, if transition has only one incoming
+                            for transition_help in transitions:
+                                # Search the first follow-up activity (2nd) of the value in the list_start_activities
+                                if (transition_help.name == inter and
+                                        len(list(transition_help.out_arcs)) > 0
+                                        and len(list(list(transition_help.out_arcs)[0].target.out_arcs)) > 0):
+
+                                    # Name of follow-up activity
+                                    # Problem this would have two n > 1 out_arcs
+                                    follow_up_transition = list(list(transition_help.out_arcs)[0].target.out_arcs)[
+                                        0].target.name
+
+                                    # Check if this event has two incoming arcs
+                                    for transition_help2 in transitions:
+                                        if transition_help2.name == follow_up_transition:
+                                            # End of and branch found
+                                            if len(transition_help2.in_arcs) > 1:
+                                                end_path_found = True
+                                                end_event_arcs = follow_up_transition
+                                                break
+                                            else:
+                                                # Add element to intermediate list
+                                                intermediate_list_of_branch.append(follow_up_transition)
+                                                break
+                    # Add list of path
+                    list_of_and_branches.append(intermediate_list_of_branch)
 
             # Fill dict with required information of one path/ branch in "and" gateway
             and_branch_dict = {'start_activity': start_event_and,
@@ -219,7 +227,7 @@ def __get_parallel_activities_from_petri_net(event_log_file_path: str, file_path
     return list_and_in_branch
 
 
-# Alpha Miner (implementation of pm4py)
+# Alpha Miner (implementation of Pm4Py)
 def alpha_miner(event_log_file_path: str, file_path_store_petri_net: str):
     dataframe = pd.read_csv(event_log_file_path, sep=',')
     dataframe = pm4py.format_dataframe(dataframe,

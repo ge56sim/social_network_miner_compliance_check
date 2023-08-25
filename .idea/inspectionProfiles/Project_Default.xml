@@ -1,0 +1,50 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="206" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="dict.__getitem__" />
+          <option value="src.*" />
+          <option value="String" />
+          <option value="List" />
+          <option value="list" />
+          <option value="str" />
+          <option value="dict" />
+          <option value="pre_processing.event_log.extractors_pre_processing_event_log.object_oriented_event_log_meta_model.trace.get_resource_activity_organisation_structure_pairs_of_trace.items" />
+          <option value="tuple.get_resource_activity_organisation_structure_pairs_of_trace" />
+          <option value="pre_processing.event_log.extractors_pre_processing_event_log.object_oriented_event_log_meta_model.attribute.Attribute.__getitem__" />
+          <option value="pre_processing.event_log.extractors_pre_processing_event_log.object_oriented_event_log_meta_model.event.Event.__getitem__" />
+          <option value="social_network_generation_event_log.pre_processing.extractors_pre_processing_event_log.object_oriented_event_log_meta_model.event.Event.__getitem__" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

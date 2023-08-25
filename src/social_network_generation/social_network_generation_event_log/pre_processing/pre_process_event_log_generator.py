@@ -28,12 +28,6 @@ from social_network_generation.social_network_generation_event_log.pre_processin
 from social_network_generation.social_network_generation_event_log.pre_processing.extractors_pre_processing_event_log.extraction_to_event_log import \
     convert_df_to_event_log
 
-"""
-from social_network_generation_event_log.pre_processing.sna_statistics.sna_resource_analysis import handover_of_work, \
-    subcontracting, working_together, \
-    similar_activities
-"""
-
 
 def create_network_distinct_traces_of_event_log_pre_process_json(dataframe_input_path: str,
                                                                  case_id_column_name: str,
@@ -53,18 +47,8 @@ def create_network_distinct_traces_of_event_log_pre_process_json(dataframe_input
     event_log = convert_df_to_event_log(df=dataframe)
 
     # List of: Network of Resource Performer, Resource Consumer, and Activity:
-    resulting_networks_of_distinct_traces = event_log.get_network_output_of_distinct_traces_in_event_log(resource_structure_type=resource_key_name)
-
-    """
-    # SNA Statistics:
-    hw_data, hw_directions, \
-        subc_data, subc_directions, \
-        work_tog_data, work_tog_directions, \
-        sim_act_data, subc_directions = __get_sna_statistics(dataframe_input_path=dataframe_input_path,
-                                                             case_id_column_name=case_id_column_name,
-                                                             activity_column_name=activity_column_name,
-                                                             resource_key_name=resource_key_name)
-    """
+    resulting_networks_of_distinct_traces = event_log.get_network_output_of_distinct_traces_in_event_log(
+        resource_structure_type=resource_key_name)
 
     # Output data
     data = {"pairs": resulting_networks_of_distinct_traces}
@@ -76,53 +60,6 @@ def create_network_distinct_traces_of_event_log_pre_process_json(dataframe_input
         json.dump(data, f, ensure_ascii=False, indent=4, default=str)
 
     return json_output
-
-
-"""
-# Return all statistics from Pm4Py in the area of social network analysis
-# @private
-def __get_sna_statistics(dataframe_input_path: str,
-                         case_id_column_name: str,
-                         activity_column_name: str,
-                         resource_key_name: str):
-    # Handover of work
-    hw_values = handover_of_work(path_log=dataframe_input_path,
-                                 case_id_name_in_log=case_id_column_name,
-                                 activity_name_in_log=activity_column_name,
-                                 resource_key=resource_key_name)
-    hw_data = hw_values.connections
-    hw_directions = hw_values.is_directed
-
-    subc_values = subcontracting(path_log=dataframe_input_path,
-                                 case_id_name_in_log=case_id_column_name,
-                                 activity_name_in_log=activity_column_name,
-                                 resource_key=resource_key_name)
-    subc_data = subc_values.connections
-    subc_directions = subc_values.is_directed
-
-    work_tog_values = working_together(path_log=dataframe_input_path,
-                                       case_id_name_in_log=case_id_column_name,
-                                       activity_name_in_log=activity_column_name,
-                                       resource_key=resource_key_name)
-    work_tog_data = work_tog_values.connections
-    work_tog_directions = work_tog_values.is_directed
-
-    sim_act_values = similar_activities(path_log=dataframe_input_path,
-                                        case_id_name_in_log=case_id_column_name,
-                                        activity_name_in_log=activity_column_name,
-                                        resource_key=resource_key_name)
-    sim_act_data = sim_act_values.connections
-    sim_act_connections = sim_act_values.is_directed
-
-    return hw_data, hw_directions, subc_data, subc_directions, work_tog_data, work_tog_directions, sim_act_data, subc_directions
-"""
-
-"""
-# Try to merge the network structure with the social network result
-# @private
-def __merge_network_and_statistics():
-    return None
-"""
 
 
 # Helper method to load the data frame which is based on the XES event log
